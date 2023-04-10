@@ -2,7 +2,6 @@
 
 ![leaderboard](https://user-images.githubusercontent.com/102650102/230634683-2a2f19b1-986f-46ae-864f-d3eb777a3800.png)
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -76,7 +75,6 @@ Install this project with:
 
 - npm install
 
-
 ### Deployment
 
 You can deploy this project using:
@@ -84,18 +82,18 @@ You can deploy this project using:
 - npm run build
 - npm run start
 
-### Live 
-- Live : [@live](https://sawmon71293.github.io/LeaderBoard/)
+### Live
+
+- Live : [@live]()
 
 <!-- live -->
 
 ## 👥 Author <a name="authors"></a>
 
-👤 **Saw Mon Han**
+👤 **Phone Khaing Hein**
 
-- GitHub: [@sawmon](https://github.com/sawmon71293/)
-- Twitter: [@twitterhandle](https://twitter.com/sawmon34268255)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/saw-mon-han/)
+- GitHub: [@phonekhainghein](https://github.com/Rimuru-Tempest-26)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/phone-khaing-hein-759497216/)
 
 <!-- FUTURE FEATURES -->
 
