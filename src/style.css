@@ -16,6 +16,7 @@ td {
   border-collapse: collapse;
   padding: 5px;
   width: 300px;
+  text-align: left;
 }
 
 input {
