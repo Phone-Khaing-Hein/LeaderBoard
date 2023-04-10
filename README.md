@@ -66,7 +66,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd your-folder
-  git clone git@github.com:sawmon71293/LeaderBoard.git
+  git clone https://github.com/Rimuru-Tempest-26/LeaderBoard.git
 ```
 
 ### Install
