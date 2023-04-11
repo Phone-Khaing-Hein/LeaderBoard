@@ -3,9 +3,9 @@ const bordList = () => {
   const board = document.getElementById('board');
   const data = scores.map((s) => '<tr><td>'.concat(s.user).concat(' : ').concat(s.score).concat('</td></tr>'));
   const list = `
-        <div>
-            <h3>Recent Scores <button id="refresh">Refresh</button></h3>
-            <table>
+        <div class="w-50" style="max-height:500px;overflow:scroll;">
+            <h3 class="mb-3">Recent Scores <button id="refresh" class="btn btn-sm btn-secondary shadow ms-3">Refresh</button></h3>
+            <table class="table table-striped table-hover table-bodered">
               <tbody id="list">
               </tbody>
             </table>
