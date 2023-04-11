@@ -1,4 +1,5 @@
 const bordList = () => {
+  console.log('list');
   const scores = JSON.parse(localStorage.getItem('scores')) || [];
   const board = document.getElementById('board');
   const data = scores.map((s) => '<tr><td>'.concat(s.user).concat(' : ').concat(s.score).concat('</td></tr>'));

@@ -32,9 +32,11 @@ const getScores = async () => {
 };
 
 const init = () => {
+  console.log('start init');
   getScores();
   bordList();
   form();
+  console.log('end init');
 };
 
 init();
@@ -47,6 +49,9 @@ formElement.addEventListener('submit', async (e) => {
     score: formElement.score.value.trim(),
   };
 
+  formElement.name.value = '';
+  formElement.score.value = '';
+
   if (data.user !== '' && data.score !== '') {
     const response = await fetch(`${URL}/games/${api}/scores`, {
       method: 'POST',
@@ -54,17 +59,17 @@ formElement.addEventListener('submit', async (e) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    }).then((response) => {
-      const json = response.json();
-      document.getElementById('board').innerHTML = '';
-      init();
     });
+
+    const json = await response.json();
+    if (response.ok) {
+      document.getElementById('list').innerHTML += `<tr><td>${data.user} : ${data.score}</td></tr>`;
+    }
   }
 });
 
 const refresh = document.getElementById('refresh');
 
 refresh.addEventListener('click', () => {
-  document.getElementById('board').innerHTML = '';
-  init();
+  window.location.reload();
 });
