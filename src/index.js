@@ -31,11 +31,13 @@ const getScores = async () => {
   localStorage.setItem('scores', JSON.stringify(result));
 };
 
-getScores();
+const init = () => {
+  getScores();
+  bordList();
+  form();
+};
 
-bordList();
-
-form();
+init();
 
 const formElement = document.getElementById('scoreForm');
 formElement.addEventListener('submit', async (e) => {
@@ -55,9 +57,7 @@ formElement.addEventListener('submit', async (e) => {
     }).then((response) => {
       const json = response.json();
       document.getElementById('board').innerHTML = '';
-      getScores();
-      bordList();
-      form();
+      init();
     });
   }
 });
@@ -65,8 +65,6 @@ formElement.addEventListener('submit', async (e) => {
 const refresh = document.getElementById('refresh');
 
 refresh.addEventListener('click', () => {
-  getScores();
   document.getElementById('board').innerHTML = '';
-  bordList();
-  form();
+  init();
 });
