@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-![leaderboard](https://user-images.githubusercontent.com/102650102/230634683-2a2f19b1-986f-46ae-864f-d3eb777a3800.png)
+![leaderboard](https://media.discordapp.net/attachments/956743592498593814/1095404319106408679/4.png?width=1231&height=606)
 
 # 📗 Table of Contents
 
