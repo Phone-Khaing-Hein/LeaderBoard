@@ -12,7 +12,7 @@ const getGameId = async () => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ name: "Phone Khaing Hein's games" }),
+    body: JSON.stringify({ name: "Phone Khaing Hein's new games" }),
   });
 
   const { result } = await response.json();
@@ -32,11 +32,9 @@ const getScores = async () => {
 };
 
 const init = () => {
-  console.log('start init');
   getScores();
   bordList();
   form();
-  console.log('end init');
 };
 
 init();
@@ -63,7 +61,11 @@ formElement.addEventListener('submit', async (e) => {
 
     const json = await response.json();
     if (response.ok) {
-      document.getElementById('list').innerHTML += `<tr><td>${data.user} : ${data.score}</td></tr>`;
+      document.getElementById(
+        'list',
+      ).innerHTML += `<tr><td>${data.user} : ${data.score}</td></tr>`;
+      const oldScores = JSON.parse(localStorage.getItem('scores'));
+      localStorage.setItem('scores', JSON.stringify([...oldScores, { score: data.score, user: data.user }]));
     }
   }
 });
@@ -71,5 +73,7 @@ formElement.addEventListener('submit', async (e) => {
 const refresh = document.getElementById('refresh');
 
 refresh.addEventListener('click', () => {
-  window.location.reload();
+  document.getElementById('board').innerHTML = '';
+  bordList();
+  form();
 });
